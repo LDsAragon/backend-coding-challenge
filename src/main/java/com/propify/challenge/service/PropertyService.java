@@ -4,38 +4,48 @@ import com.propify.challenge.entities.Property;
 import com.propify.challenge.entities.PropertyReport;
 import com.propify.challenge.mapper.AddressMapper;
 import com.propify.challenge.mapper.PropertyMapper;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
+@Slf4j
+@Service
 public class PropertyService {
 
+    @Autowired
     PropertyMapper propertyMapper;
 
+    @Autowired
     AddressMapper addressMapper;
 
+    @Autowired
     AlertService alertService;
 
     public Collection<Property> search(String minRentPrice, String maxRentPrice) {
+        log.info("Starting search for rent prices between  : " + minRentPrice + " and " + maxRentPrice);
         return propertyMapper.search(minRentPrice, maxRentPrice);
     }
 
     public Property findById(int id) {
+        log.info("Starting findById for : " + id);
         return propertyMapper.findById(id);
     }
 
     public void insert(Property property) {
         propertyMapper.insert(property);
-        System.out.println("CREATED: " + property.id);
+        log.info("CREATED: " + property.id);
     }
 
     public void update(Property property) {
         propertyMapper.update(property);
-        System.out.println("UPDATED: " + property.id);
+        log.info("UPDATED: " + property.id);
     }
 
     public void delete(int id) {
         propertyMapper.delete(id);
-        System.out.println("DELETED: " + id);
+        log.info("DELETED: " + id);
 
         alertService.sendPropertyDeletedAlert(id);
         // TODO: Sending the alert should be non-blocking (asynchronous)
