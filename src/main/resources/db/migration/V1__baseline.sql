@@ -1,5 +1,19 @@
+
+CREATE TABLE address (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  street VARCHAR (255) NOT NULL,
+  city VARCHAR (255) NOT NULL,
+  state VARCHAR (2) NOT NULL,
+  zip VARCHAR (2) NOT NULL,
+  timezone VARCHAR (5) NOT NULL
+);
+
 CREATE TABLE property (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  rent_price FLOAT NOT NULL
--- TODO: Add missing columns, indices, constraints
+  rent_price FLOAT NOT NULL,
+  propertyType VARCHAR (255) NOT NULL,
+  addressId INT UNSIGNED ,
+  emailAddress VARCHAR (100) NOT NULL,
+  code VARCHAR (10) NOT NULL,
+  FOREIGN KEY (addressId) REFERENCES address(id)
 );

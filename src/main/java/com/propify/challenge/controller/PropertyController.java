@@ -4,6 +4,7 @@ import com.propify.challenge.constants.UrlConstants;
 import com.propify.challenge.entities.Property;
 import com.propify.challenge.entities.PropertyReport;
 import com.propify.challenge.service.PropertyService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Update;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +17,17 @@ import java.util.Collection;
  *  API endpoints for CRUD operations on entities of type Property
  * */
 
+@Slf4j
 @RestController(UrlConstants.PROPERTY_CONTROLLER)
 public class PropertyController {
 
     @Autowired
     PropertyService propertyService;
+
+    @GetMapping("/log")
+    public void log() {
+        log.info("HI, IM ALIVE") ;
+    }
 
     @GetMapping(value = UrlConstants.SEARCH_BETWEEN)
     public Collection<Property> search(String minRentPrice, String maxRentPrice) {

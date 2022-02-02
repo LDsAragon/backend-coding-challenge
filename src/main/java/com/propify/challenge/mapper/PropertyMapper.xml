@@ -11,7 +11,7 @@ UPDATE property ...
     </update>
 
     <delete id="delete">
-DELETE FROM property ...
+DELETE FROM property WHERE id = #{id};
     </delete>
 
     <select id="search" resultType="com.propify.challenge.entities.Property">

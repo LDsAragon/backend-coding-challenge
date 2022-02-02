@@ -20,3 +20,19 @@ mvn flyway:migrate
 ```
 
 If you are not familiar with Flyway migrations, the database seed is `src/main/resources/db/migration/V1__baseline.sql`.
+
+
+
+```commandline
+MyNotes 
+
+add messajes to the validations constraints
+Add lombok, 
+add swagger, 
+fix checkstyle with google.xml
+fix sonarLint smells
+create/add custom exceptions
+
+lean better docker
+learn ibastis 
+```
