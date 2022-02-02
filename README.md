@@ -24,15 +24,16 @@ If you are not familiar with Flyway migrations, the database seed is `src/main/r
 
 
 ```commandline
-MyNotes 
+MyNotes Maty
 
 add messajes to the validations constraints
-Add lombok, 
-add swagger, 
-fix checkstyle with google.xml
-fix sonarLint smells
+Add lombok,  does it work with ibastis? seems like there is a plugin for that  
+Add swagger, 
+add and fix checkstyle with google.xml
+add and fix sonarLint smells
+add tests and jacoco
 create/add custom exceptions
 
-lean better docker
-learn ibastis 
+lean better docker i used some microsoft tutorial to download install and enable virtualization
+learn ibastis  i was reading in here https://www.tutorialspoint.com/mybatis/mybatis_annotations.htm
 ```

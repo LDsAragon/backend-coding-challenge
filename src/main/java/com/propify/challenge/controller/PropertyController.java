@@ -24,11 +24,6 @@ public class PropertyController {
     @Autowired
     PropertyService propertyService;
 
-    @GetMapping("/log")
-    public void log() {
-        log.info("HI, IM ALIVE") ;
-    }
-
     @GetMapping(value = UrlConstants.SEARCH_BETWEEN)
     public Collection<Property> search(String minRentPrice, String maxRentPrice) {
         return propertyService.search(minRentPrice, maxRentPrice);

@@ -28,7 +28,7 @@ public class Validations {
     /**
      *  Validate 2 letters
      * */
-    public final static String ZIP_VALIDATION_ADDRESS = "^[A-Za-z]{2}" ;
+    public final static String ZIP_VALIDATION_ADDRESS = "^[A-Z]{2}" ;
 
     /**
      * Checks if leap year like 29/02/2020 or 29/02/2024
