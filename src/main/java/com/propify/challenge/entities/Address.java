@@ -1,5 +1,6 @@
 package com.propify.challenge.entities;
 
+
 public class Address {
 
     public String street; // must not be null or blank
