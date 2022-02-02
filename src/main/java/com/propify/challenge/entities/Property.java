@@ -17,6 +17,7 @@ public class Property {
     public int id;
 
     @NotNull
+    @Pattern(regexp = Validations.DATE_VALIDATION_PROPERTY)
     public String createTime;
 
     @NotNull
