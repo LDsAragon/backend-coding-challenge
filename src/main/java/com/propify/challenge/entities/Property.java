@@ -1,7 +1,10 @@
 package com.propify.challenge.entities;
 
 import com.propify.challenge.constants.PropertyType;
+import com.propify.challenge.constants.Validations;
 import com.propify.challenge.entities.Address;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Update;
 
 import javax.validation.Valid;
 import javax.validation.constraints.*;
@@ -9,8 +12,9 @@ import java.math.BigDecimal;
 
 public class Property {
 
-    @NotNull
-    public int id; // must be null for INSERT and not null for UPDATE
+    @NotNull(groups = {Update.class}) // must be not null for UPDATE
+    @Null(groups = {Insert.class}) // must be null for INSERT
+    public int id;
 
     @NotNull
     public String createTime;
@@ -29,10 +33,10 @@ public class Property {
     public Address address;
 
     @NotNull
-    @Pattern(regexp = "")
+    @Pattern(regexp = Validations.EMAIL_VALIDATION_PROPERTY)
     public String emailAddress; // must be a valid email address
 
     @NotNull // not null,
-    @Pattern(regexp = "") // only uppercase letters or numbers, 10 characters
+    @Pattern(regexp = Validations.CODE_VALIDATION_PROPERTY) // only uppercase letters or numbers, 10 characters
     public String code;
 }
