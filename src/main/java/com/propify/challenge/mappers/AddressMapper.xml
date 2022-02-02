@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.propify.challenge.mapper.AddressMapper">
+<mapper namespace="com.propify.challenge.mappers.AddressMapper">
 
     <insert id="insert">
-INSERT INTO address ...
+        INSERT INTO address (street, city, state, zip, timezone )
+        VALUES (#{street}, #{city}, #{state}, #{zip}, #{timezone});
     </insert>
 
     <select id="search" resultType="com.propify.challenge.entities.Address">
-SELECT * FROM address;
+        SELECT * FROM address;
     </select>
 
     <select id="findById" resultType="com.propify.challenge.entities.Address">
-SELECT * FROM address WHERE id = #{id};
+        SELECT * FROM address WHERE id = #{id};
     </select>
 
 </mapper>

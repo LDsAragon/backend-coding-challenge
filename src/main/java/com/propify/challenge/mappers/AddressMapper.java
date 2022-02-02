@@ -1,4 +1,4 @@
-package com.propify.challenge.mapper;
+package com.propify.challenge.mappers;
 
 import com.propify.challenge.entities.Address;
 import org.apache.ibatis.annotations.Mapper;

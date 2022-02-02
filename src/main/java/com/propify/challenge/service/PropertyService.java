@@ -2,8 +2,8 @@ package com.propify.challenge.service;
 
 import com.propify.challenge.entities.Property;
 import com.propify.challenge.entities.PropertyReport;
-import com.propify.challenge.mapper.AddressMapper;
-import com.propify.challenge.mapper.PropertyMapper;
+import com.propify.challenge.mappers.AddressMapper;
+import com.propify.challenge.mappers.PropertyMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

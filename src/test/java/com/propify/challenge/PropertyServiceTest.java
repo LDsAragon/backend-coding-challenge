@@ -1,7 +1,7 @@
 package com.propify.challenge;
 
-import com.propify.challenge.mapper.AddressMapper;
-import com.propify.challenge.mapper.PropertyMapper;
+import com.propify.challenge.mappers.AddressMapper;
+import com.propify.challenge.mappers.PropertyMapper;
 import com.propify.challenge.service.AlertService;
 import com.propify.challenge.service.PropertyService;
 import org.junit.jupiter.api.Test;
