@@ -1,4 +1,7 @@
-package com.propify.challenge;
+package com.propify.challenge.entities;
+
+import com.propify.challenge.constants.PropertyType;
+import com.propify.challenge.entities.Address;
 
 public class Property {
 
